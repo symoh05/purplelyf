@@ -6,31 +6,46 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
     color: #5c2d91; /* Dark purple */
+    line-height: 1.6;
 }
 
-a {
-    color: #5c2d91;
+header {
+    background-color: #5c2d91;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+header .nav a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-a:hover {
-    text-decoration: underline;
+header .nav a:hover {
+    background-color: #4a1f76;
 }
 
-h1, h2, p {
-    margin-bottom: 20px;
-}
-
-/* Login Page Styling */
+/* Login Page */
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -38,14 +53,15 @@ h1, h2, p {
     max-width: 400px;
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #login-form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
     color: #5c2d91;
 }
 
@@ -64,6 +80,7 @@ h1, h2, p {
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -71,67 +88,82 @@ h1, h2, p {
     background-color: #4a1f76;
 }
 
-/* Portal Layout */
+/* Members and Home Pages */
 .portal-container {
+    max-width: 800px;
+    margin: 30px auto;
     padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 1.2em;
-}
-
-#gallery {
-    margin-top: 30px;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.image-item img {
-    width: 100%;
+    background-color: #ffffff;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.image-item:hover {
-    transform: scale(1.05);
+h1, h2 {
+    color: #5c2d91;
+    text-align: center;
 }
 
-#members ul {
-    list-style-type: none;
+ul {
+    list-style: none;
     padding: 0;
 }
 
-#members ul li {
+li {
     padding: 10px;
     border-bottom: 1px solid #5c2d91;
 }
 
+/* Add Member Section */
+.add-member {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-member h3 {
+    margin-bottom: 10px;
+    color: #5c2d91;
+}
+
+.add-member form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-member input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-member button {
+    padding: 10px 20px;
+    background-color: #5c2d91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-member button:hover {
+    background-color: #4a1f76;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 10px;
     background-color: #5c2d91;
     color: white;
+    font-size: 0.9em;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .gallery-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .nav {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .add-member input {
+        width: 80%;
     }
 }
