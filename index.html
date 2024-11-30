@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purple Lyf</title>
+    <title>Home - Purple Lyf</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="portal-container">
-        <header>
-            <div class="nav">
-                <a href="index.html">Home</a>
-                <a href="members.html">Members</a>
-            </div>
-            <h1>Welcome to Purple Lyf</h1>
-            <p>A tribute to Form 4 Purple</p>
-        </header>
-
-        <section id="gallery">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-container">
-                <div class="image-item">
-                    <img src="image1.jpg" alt="Class Photo 1">
+    <header>
+        <h1>Welcome to Purple Lyf</h1>
+        <nav>
+            <a href="members.html">Members</a>
+            <a href="#" id="logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>About Form 4 Purple</h2>
+            <p>
+                Form 4 Purple, lovingly referred to as *Purple Lyf*, was more than just a class—it was a family. 
+                Our time together was marked by laughter, unity, and unforgettable memories. From group projects 
+                to sports competitions, we thrived as a close-knit group that supported one another through all 
+                challenges. Our shared experiences and bonds remain strong even years later.
+            </p>
+        </section>
+        
+        <section class="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <div class="photo-grid">
+                <!-- Photo 1 -->
+                <div class="photo-item">
+                    <img src="images/photo1.jpg" alt="Group Discussion" class="expandable">
+                    <p>Group discussion during a class project.</p>
                 </div>
-                <div class="image-item">
-                    <img src="image2.jpg" alt="Class Photo 2">
+                <!-- Photo 2 -->
+                <div class="photo-item">
+                    <img src="img/q.jpg" alt="Sports Day" class="expandable">
+                    <p>Celebrating victory on Sports Day.</p>
                 </div>
-                <div class="image-item">
-                    <img src="image3.jpg" alt="Class Photo 3">
+                <!-- Photo 3 -->
+                <div class="photo-item">
+                    <img src="images/photo3.jpg" alt="Classroom Moments" class="expandable">
+                    <p>A candid moment in our beloved classroom.</p>
+                </div>
+                <!-- Photo 4 -->
+                <div class="photo-item">
+                    <img src="images/photo4.jpg" alt="School Trip" class="expandable">
+                    <p>A snapshot from our unforgettable school trip.</p>
                 </div>
             </div>
         </section>
-
-        <section id="about">
-            <h2 class="section-title">About Us</h2>
-            <p>Form 4 Purple, also known as Purple Lyf, is a class filled with unforgettable memories, laughs, and bonds that will last a lifetime.</p>
-        </section>
-
-        <footer>
-            <p>© 2024 Purple Lyf | All Rights Reserved</p>
-        </footer>
-    </div>
-
+        <div id="image-modal" class="modal">
+            <span id="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="Expanded view">
+        </div>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>
