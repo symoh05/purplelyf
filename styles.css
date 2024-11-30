@@ -6,39 +6,81 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #5c2d91; /* Dark purple */
     line-height: 1.6;
 }
 
+/* Header */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #5c2d91;
     color: white;
-    padding: 10px 0;
-    text-align: center;
 }
 
-header .nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
+header h1 {
+    font-size: 1.5em;
 }
 
-header .nav a {
+header nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
+    margin-left: 15px;
 }
 
-header .nav a:hover {
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #5c2d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.photo-item a:hover {
     background-color: #4a1f76;
 }
 
-/* Login Page */
+/* Login & Registration Forms */
 .login-container {
     display: flex;
     flex-direction: column;
@@ -49,7 +91,13 @@ header .nav a:hover {
     background-color: #f4f4f4;
 }
 
-#login-form {
+h1 {
+    color: #5c2d91;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+form {
     max-width: 400px;
     width: 100%;
     padding: 20px;
@@ -58,14 +106,14 @@ header .nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#login-form label {
+form label {
     display: block;
     margin-bottom: 10px;
     font-size: 1.1em;
     color: #5c2d91;
 }
 
-#login-form input {
+form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -73,7 +121,7 @@ header .nav a:hover {
     border-radius: 5px;
 }
 
-#login-form button {
+form button {
     width: 100%;
     padding: 10px;
     background-color: #5c2d91;
@@ -84,86 +132,298 @@ header .nav a:hover {
     cursor: pointer;
 }
 
-#login-form button:hover {
+form button:hover {
     background-color: #4a1f76;
 }
 
-/* Members and Home Pages */
-.portal-container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    color: #5c2d91;
+form p {
+    margin-top: 10px;
     text-align: center;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    border-bottom: 1px solid #5c2d91;
-}
-
-/* Add Member Section */
-.add-member {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.add-member h3 {
-    margin-bottom: 10px;
-    color: #5c2d91;
-}
-
-.add-member form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.add-member input {
-    width: 60%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.add-member button {
-    padding: 10px 20px;
-    background-color: #5c2d91;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-member button:hover {
-    background-color: #4a1f76;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #5c2d91;
-    color: white;
     font-size: 0.9em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .add-member input {
-        width: 80%;
-    }
+form p a {
+    color: #5c2d91;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #5c2d91;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5c2d91;
+    color: white;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #5c2d91;
+    margin-bottom: 10px;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    padding: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-item p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.photo-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #5c2d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.photo-item a:hover {
+    background-color: #4a1f76;
+}
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #4B0082; /* Dark purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styling */
+th {
+    background-color: #4B0082; /* Dark purple */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table row styling */
+td {
+    background-color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table row hover effect */
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Table caption and other elements */
+h2 {
+    color: #4B0082;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Logout button styling */
+#logout {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #E91E63; /* Pink */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#logout:hover {
+    background-color: #d81b60;
+}
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Space from the main content */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Initially hide the modal */
+    position: fixed; /* Fixed position to make it stay on top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure modal appears on top of other content */
+    align-items: center;
+    justify-content: center;
+    display: flex; /* Flexbox to center the content */
+}
+
+#modal-img {
+    max-width: 90%; /* Limit image width */
+    max-height: 90%; /* Limit image height */
+    margin: auto;
+    display: block;
+}
+
+/* Close button styling */
+#close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001; /* Make sure the close button appears above the modal */
+}
+
+/* Optional: Style the photo gallery container */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo-item img {
+    width: 100%; /* Ensure the images fill the container */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05); /* Add a slight zoom effect on hover */
 }
