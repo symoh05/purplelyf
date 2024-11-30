@@ -7,22 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Purple Lyf - Members</h1>
-    </header>
+    <div class="portal-container">
+        <header>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="members.html">Members</a>
+            </div>
+            <h1>Purple Lyf - Members</h1>
+        </header>
 
-    <section id="members">
-        <h2>Our Esteemed Members</h2>
-        <ul id="members-list">
-            <li>John Doe</li>
-            <li>Jane Smith</li>
-            <li>Peter Kamau</li> <!-- Add all student names here -->
-            <!-- Add more names as needed -->
-        </ul>
-    </section>
+        <section id="members">
+            <h2>Our Esteemed Members</h2>
+            <ul id="members-list">
+                <li>John Doe</li>
+                <li>Jane Smith</li>
+                <li>Peter Kamau</li>
+                <!-- Initial names -->
+            </ul>
 
-    <footer>
-        <p>© 2024 Purple Lyf | All Rights Reserved</p>
-    </footer>
+            <div class="add-member">
+                <h3>Add Your Name</h3>
+                <form id="add-member-form">
+                    <input type="text" id="member-name" placeholder="Enter your name" required>
+                    <button type="submit">Add Name</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Purple Lyf | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
