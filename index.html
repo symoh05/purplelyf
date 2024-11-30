@@ -3,58 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Purple Lyf</title>
+    <title>Login - Purple Lyf</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Purple Lyf</h1>
-        <nav>
-            <a href="members.html">Members</a>
-            <a href="#" id="logout">Logout</a>
-        </nav>
-    </header>
-    <main>
-        <section class="about-section">
-            <h2>About Form 4 Purple</h2>
-            <p>
-                Form 4 Purple, lovingly referred to as *Purple Lyf*, was more than just a class—it was a family. 
-                Our time together was marked by laughter, unity, and unforgettable memories. From group projects 
-                to sports competitions, we thrived as a close-knit group that supported one another through all 
-                challenges. Our shared experiences and bonds remain strong even years later.
-            </p>
-        </section>
-        
-        <section class="photo-gallery">
-            <h2>Photo Gallery</h2>
-            <div class="photo-grid">
-                <!-- Photo 1 -->
-                <div class="photo-item">
-                    <img src="images/photo1.jpg" alt="Group Discussion" class="expandable">
-                    <p>Group discussion during a class project.</p>
-                </div>
-                <!-- Photo 2 -->
-                <div class="photo-item">
-                    <img src="img/q.jpg" alt="Sports Day" class="expandable">
-                    <p>Celebrating victory on Sports Day.</p>
-                </div>
-                <!-- Photo 3 -->
-                <div class="photo-item">
-                    <img src="images/photo3.jpg" alt="Classroom Moments" class="expandable">
-                    <p>A candid moment in our beloved classroom.</p>
-                </div>
-                <!-- Photo 4 -->
-                <div class="photo-item">
-                    <img src="images/photo4.jpg" alt="School Trip" class="expandable">
-                    <p>A snapshot from our unforgettable school trip.</p>
-                </div>
-            </div>
-        </section>
-        <div id="image-modal" class="modal">
-            <span id="close-modal">&times;</span>
-            <img id="modal-img" src="" alt="Expanded view">
-        </div>
-    </main>
+    <div class="login-container">
+        <h1>Purple Lyf</h1>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+            <p>New member? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
